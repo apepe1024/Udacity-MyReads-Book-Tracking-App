@@ -31,7 +31,7 @@ class App extends React.Component {
         // iterating over this.props.books      
         const adjustedBooks = searchResults.map(searchResult => {
             this.state.myReads.forEach(book => {
-            if (book.id === searchResult.id) searchResult.shelf = book.shelf
+            searchResult.shelf = "none";
           })
           return searchResult
         })
